@@ -1,0 +1,25 @@
+.progress-container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    padding: 20px 0 0 15px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+.progress-value {
+    /* width: 25%; */
+    background: #30c85a;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: end;
+}

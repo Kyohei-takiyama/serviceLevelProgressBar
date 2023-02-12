@@ -1,0 +1,28 @@
+<template>
+  <div class="progress-container">
+    <div class="progress-icon-container">
+      <lightning-icon icon-name={icon} alternative-text="電話" title="phone"></lightning-icon>
+    </div>
+    <div class="progress-bar-container">
+      <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-12">
+        <strong>{channel} {value}件</strong>
+      </div>
+      <div
+        class="slds-progress-bar progress-bar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-labelledby="progress-bar-label-id-12"
+        role="progressbar"
+      >
+        <span class="slds-progress-bar__value progress-bar progress-value">
+          <span class="slds-assistive-text">Progress: {progress}</span>
+        </span>
+      </div>
+      <div class="progress-text">
+        <span aria-hidden="true">
+          <strong>個人目標：{goal}件</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</template>

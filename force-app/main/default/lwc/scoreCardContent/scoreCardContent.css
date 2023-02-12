@@ -1,0 +1,23 @@
+:host() {
+    --hot-orange: #7e2600;
+}
+.data-card-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-card-item-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.data-card-item-content {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.text-color_hot-orange {
+    color: var(--hot-orange);
+}

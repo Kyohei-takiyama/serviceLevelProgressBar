@@ -1,0 +1,16 @@
+header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+}
+
+.main {
+    justify-content: space-around;
+    margin: 15px 0;
+}

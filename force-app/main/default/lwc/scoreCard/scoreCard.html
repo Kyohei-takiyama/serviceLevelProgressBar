@@ -1,0 +1,51 @@
+<template>
+  <lightning-card>
+    <div class="container">
+      <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12" padding="horizontal-medium">
+          <header>
+            <h2>活動記録 - 今月</h2>
+            <lightning-button-icon
+              icon-name="utility:refresh"
+              alternative-text="更新"
+              title="更新"
+              size="medium"
+              onclick={refreshProgress}
+            ></lightning-button-icon>
+          </header>
+        </lightning-layout-item>
+      </lightning-layout>
+      <lightning-layout multiple-rows="true" horizontal-align="center" class="main">
+        <lightning-layout-item class="slds-box data-card" size="5" padding="around-small" flexibility="auto">
+          <c-score-card-content
+            is-goal={cardContentProps.isGoal}
+            card-item-label={cardContentProps.cardItemLabel}
+            card-item-value={cardContentProps.cardItemValue}
+          ></c-score-card-content>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-box data-card" size="6" padding="around-small" flexibility="auto">
+          <c-score-card-content
+            is-goal={cardContentProps2.isGoal}
+            card-item-label={cardContentProps2.cardItemLabel}
+            card-item-value={cardContentProps2.cardItemValue}
+          ></c-score-card-content>
+        </lightning-layout-item>
+      </lightning-layout>
+      <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12" flexibility="auto">
+          <template for:each={scores} for:item="score">
+            <c-score-card-progress
+              class={score.channel}
+              key={score.channel}
+              icon={score.icon}
+              channel={score.channel}
+              progress={score.progress}
+              value={score.currentTotalValue}
+              goal={score.goalValue}
+            ></c-score-card-progress>
+          </template>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </lightning-card>
+</template>
